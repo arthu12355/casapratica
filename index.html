@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Achadinhos inteligentes para deixar sua casa mais prática e organizada.">
+<title>Casa Prática | Achadinhos para Casa e Cozinha</title>
+<style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1792399");</style>
+<style>
+:root{--green:#28543f;--green2:#3c6b50;--sage:#dce5d4;--cream:#fbf8f0;--ink:#20372b;--muted:#667168;--line:#e8e7de;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}
+header{background:#fffdf8;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:25px;font-weight:bold;color:var(--green);white-space:nowrap}
+.brand-mark{width:39px;height:39px;border:2px solid var(--green);border-radius:12px 12px 8px 8px;display:grid;place-items:center;font-family:Arial;font-size:24px}
+.brand small{display:block;font:11px Arial,sans-serif;color:#4f6255;font-weight:normal;margin-top:-3px}
+nav{display:flex;gap:24px;align-items:center;font-size:13px}nav a:hover{color:var(--green2)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:white;border:0;border-radius:30px;padding:11px 19px;font-weight:bold;font-size:13px;cursor:pointer;transition:.2s}
+.nav-cta:hover,.btn:hover{background:#1c3d2c;transform:translateY(-1px)}
+.hero{display:grid;grid-template-columns: .92fr 1.08fr;min-height:330px;background:#f0eee3;overflow:hidden}
+.hero-copy{padding:48px max(25px,calc((100vw - 1180px)/2));padding-right:30px;align-self:center}
+.eyebrow{font-size:12px;letter-spacing:2px;font-weight:bold;color:var(--green);text-transform:uppercase}
+h1{font:clamp(36px,4vw,54px)/1.06 Georgia,serif;margin:10px 0 14px;letter-spacing:-1.5px}
+h1 em{font-weight:normal;color:var(--green2)}.hero p{max-width:430px;margin:0 0 22px;color:#38483d}
+.hero-photo{min-height:330px;background:linear-gradient(90deg,rgba(240,238,227,.15),transparent),url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1400&q=85') center/cover}
+.category-strip{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0;gap:0;background:#f6f5ed;border-bottom:1px solid var(--line)}
+.cat{display:flex;align-items:center;gap:13px;padding:0 18px;border-right:1px solid #dfe2d7;cursor:pointer}.cat:last-child{border:0}
+.cat-icon{flex:0 0 58px;height:58px;border-radius:50%;background:#d5e0cc;display:grid;place-items:center;font-size:26px}
+.cat strong{display:block;font-size:14px}.cat span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+main{padding:28px 0 34px}.product-section{margin:0 0 32px;scroll-margin-top:90px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:15px}
+.section-title{display:flex;align-items:center;gap:12px}.section-icon{font-size:28px}
+h2{font: bold 25px Georgia,serif;margin:0}.section-head p{font-size:13px;color:var(--muted);margin:3px 0 0}
+.see-all{font-size:12px;font-weight:bold;color:var(--green);white-space:nowrap;cursor:pointer}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#fff;border:1px solid #eeece4;border-radius:10px;overflow:hidden;box-shadow:0 3px 12px #243b2a0a;display:flex;flex-direction:column;min-width:0}
+.card img{display:block;width:100%;height:145px;object-fit:cover;background:#e9e8df}
+.card-content{padding:12px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:14px;margin:0 0 5px}.card p{font-size:12px;color:#586259;margin:0 0 13px;flex:1}
+.card .btn{align-self:flex-start;font-size:11px;padding:9px 15px;min-width:120px}
+.section-actions{display:flex;justify-content:center;margin-top:16px}
+.btn-toggle-section{background:transparent;border:1px solid var(--green);color:var(--green);padding:8px 20px;border-radius:20px;font-size:12px;font-weight:bold;cursor:pointer;transition:.2s}
+.btn-toggle-section:hover{background:var(--green);color:#fff}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);background:#f0f2e9;border-radius:15px;padding:15px 10px;margin:5px 0 0}
+.trust-item{display:flex;align-items:center;gap:10px;padding:0 13px;border-right:1px solid #dfe3d8}.trust-item:last-child{border:0}
+.trust-icon{width:42px;height:42px;border-radius:50%;background:#dce5d4;display:grid;place-items:center;font-size:21px;flex-shrink:0}
+.trust strong{font-size:11px;display:block}.trust span{font-size:10px;color:var(--muted)}
+.newsletter{margin-top:28px;background:linear-gradient(100deg,#234a36,#477556);color:white;padding:24px 0}
+.news-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}.news-inner h2{font-size:23px}.news-inner p{margin:5px 0 0;font-size:13px;color:#e6eee5}
+footer{background:#193d2c;color:white;padding:25px 0 14px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{font:22px Georgia,serif}.footer-links{display:flex;gap:17px;flex-wrap:wrap;font-size:11px}.social{font-size:12px;white-space:nowrap}
+.affiliate-note{border-top:1px solid #ffffff2a;margin-top:20px;padding-top:12px;display:flex;justify-content:space-between;gap:20px;color:#e0e8e0;font-size:10px}
+
+/* BOTÃO FLUTUANTE WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.2s;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* JANELA MODAL DE COMPARAÇÃO DE PREÇOS */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.modal-box {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: #eee;
+  border: none;
+  font-size: 18px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  z-index: 10;
+}
+.modal-close:hover { background: #ddd; }
+.modal-product-title { font-size: 22px; font-family: Georgia, serif; margin: 0 0 8px; color: var(--green); }
+.modal-product-desc { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.modal-product-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 16px; background: #e9e8df; }
+.stores-comparison-list { display: flex; flex-direction: column; gap: 12px; }
+.store-row { display: flex; align-items: center; justify-content: space-between; background: #fcfbf7; border: 1px solid #eeece4; border-radius: 10px; padding: 12px 16px; gap: 12px; flex-wrap: wrap; }
+.store-info { display: flex; align-items: center; gap: 10px; }
+.store-name { font-weight: bold; font-size: 14px; color: var(--ink); }
+.store-badge { font-size: 10px; padding: 3px 8px; border-radius: 12px; color: #fff; font-weight: bold; }
+.store-right { display: flex; align-items: center; gap: 16px; }
+.store-price { font-size: 16px; font-weight: bold; color: var(--green); }
+.store-btn { background: var(--green); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: bold; text-decoration: none; }
+.store-btn:hover { background: #1c3d2c; }
+
+/* MODAL DE CATEGORIA COMPLETA */
+.modal-category-title { font-size: 22px; font-family: Georgia, serif; margin: 0 0 16px; color: var(--green); border-bottom: 2px solid var(--line); padding-bottom: 8px; }
+.modal-products-list { display: flex; flex-direction: column; gap: 16px; }
+.modal-item-card { display: flex; gap: 14px; background: #fcfbf7; border: 1px solid #eeece4; border-radius: 10px; padding: 12px; align-items: center; }
+.modal-item-card img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; background: #e9e8df; flex-shrink: 0; }
+.modal-item-info { flex: 1; }
+.modal-item-info h4 { font-size: 15px; margin: 0 0 4px; color: var(--ink); }
+.modal-item-info p { font-size: 12px; color: #586259; margin: 0 0 8px; }
+
+/* ESTILOS MAILERLITE INTEGRADOS */
+#mlb2-47355319.ml-form-embedContainer { box-sizing: border-box; display: table; margin: 0 auto; width: 100% !important; }
+#mlb2-47355319.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 400px; width: 100%; }
+#mlb2-47355319.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+#mlb2-47355319.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group input { background-color: #ffffff !important; color: #333333 !important; border-radius: 30px !important; padding: 12px 16px !important; border: 0 !important; font-size: 14px !important; width: 100% !important; box-sizing: border-box !important; }
+#mlb2-47355319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button { background-color: var(--green) !important; border: none !important; border-radius: 30px !important; color: #fff !important; cursor: pointer; font-weight: bold !important; padding: 12px !important; width: 100% !important; }
+#mlb2-47355319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background-color: #1c3d2c !important; }
+.newsletter-success-msg { display: none; background: #e6eee5; color: var(--green); padding: 12px; border-radius: 30px; font-weight: bold; text-align: center; font-size: 14px; }
+
+@media(max-width:900px){nav{gap:12px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.category-strip{grid-template-columns:repeat(2,1fr);row-gap:18px}}
+@media(max-width:620px){.modal-item-card{flex-direction:column;align-items:flex-start}.modal-item-card img{width:100%;height:140px}.store-row{flex-direction:column;align-items:flex-start}.store-right{width:100%;justify-content:space-between}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="Casa Prática início"><span class="brand-mark">⌂</span><span>Casa Prática<small>Achadinhos para Casa e Cozinha</small></span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#cozinha">Cozinha</a><a href="#organizacao">Organização</a><a href="#banheiro">Banheiro</a><a href="#casa">Casa</a><a href="#sobre">Sobre</a>
+    </nav>
+    <a class="nav-cta" href="#produtos">♡ &nbsp; Achadinhos</a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <div class="eyebrow">Casa Prática</div>
+    <h1>Sua casa, <em>mais prática.</em></h1>
+    <p>Descubra achadinhos inteligentes para facilitar seu dia a dia, deixando sua casa mais organizada, funcional e bonita.</p>
+    <a class="btn" href="#produtos">Explorar achadinhos&nbsp; →</a>
+  </div>
+  <div class="hero-photo" role="img" aria-label="Cozinha clara e organizada"></div>
+</section>
+
+<!-- BARRA DE CATEGORIAS -->
+<div class="wrap category-strip" id="produtos">
+  <div class="cat" onclick="openCategoryModal('cozinha')"><div class="cat-icon">♨</div><div><strong>Cozinha</strong><span>Ver todos na janela ↗</span></div></div>
+  <div class="cat" onclick="openCategoryModal('organizacao')"><div class="cat-icon">▣</div><div><strong>Organização</strong><span>Ver todos na janela ↗</span></div></div>
+  <div class="cat" onclick="openCategoryModal('banheiro')"><div class="cat-icon">♧</div><div><strong>Banheiro</strong><span>Ver todos na janela ↗</span></div></div>
+  <div class="cat" onclick="openCategoryModal('casa')"><div class="cat-icon">⌂</div><div><strong>Casa</strong><span>Ver todos na janela ↗</span></div></div>
+</div>
+
+<main class="wrap">
+  <section class="product-section" id="cozinha">
+    <div class="section-head">
+      <div class="section-title"><span class="section-icon">♨</span><div><h2>Destaques da Cozinha</h2><p>Produtos que tornam o preparo das suas refeições mais simples.</p></div></div>
+      <a class="see-all" onclick="openCategoryModal('cozinha')">Ver todos na janela →</a>
+    </div>
+    <div class="products" id="products-cozinha"></div>
+    <div class="section-actions" id="actions-cozinha"></div>
+  </section>
+
+  <section class="product-section" id="organizacao">
+    <div class="section-head">
+      <div class="section-title"><span class="section-icon">▣</span><div><h2>Organização da Casa</h2><p>Produtos que ajudam a aproveitar melhor cada espaço.</p></div></div>
+      <a class="see-all" onclick="openCategoryModal('organizacao')">Ver todos na janela →</a>
+    </div>
+    <div class="products" id="products-organizacao"></div>
+    <div class="section-actions" id="actions-organizacao"></div>
+  </section>
+
+  <section class="product-section" id="banheiro">
+    <div class="section-head">
+      <div class="section-title"><span class="section-icon">♧</span><div><h2>Banheiro e Lavanderia</h2><p>Mais conforto e organização para o seu dia a dia.</p></div></div>
+      <a class="see-all" onclick="openCategoryModal('banheiro')">Ver todos na janela →</a>
+    </div>
+    <div class="products" id="products-banheiro"></div>
+    <div class="section-actions" id="actions-banheiro"></div>
+  </section>
+
+  <section class="product-section" id="casa">
+    <div class="section-head">
+      <div class="section-title"><span class="section-icon">⌂</span><div><h2>Ideias para a Casa</h2><p>Pequenos achadinhos para deixar os ambientes funcionais.</p></div></div>
+      <a class="see-all" onclick="openCategoryModal('casa')">Ver todos na janela →</a>
+    </div>
+    <div class="products" id="products-casa"></div>
+    <div class="section-actions" id="actions-casa"></div>
+  </section>
+
+  <div class="trust">
+    <div class="trust-item"><div class="trust-icon">♧</div><div><strong>Compra no site parceiro</strong><span>Confira os detalhes na loja.</span></div></div>
+    <div class="trust-item"><div class="trust-icon">♡</div><div><strong>Navegação simples</strong><span>Achadinhos separados por tema.</span></div></div>
+    <div class="trust-item"><div class="trust-icon">☆</div><div><strong>Escolhas úteis</strong><span>Ideias para facilitar a rotina.</span></div></div>
+    <div class="trust-item"><div class="trust-icon">✓</div><div><strong>Transparência</strong><span>Podemos receber comissão.</span></div></div>
+  </div>
+</main>
+
+<section class="newsletter" id="sobre">
+  <div class="wrap news-inner">
+    <div><h2>Fique por dentro das novidades!</h2><p>Encontre ideias, lançamentos e achadinhos para sua casa.</p></div>
+    <div id="mlb2-47355319" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-47355319">
+      <div class="ml-form-align-center">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody row-form">
+            <form id="newsletterForm" class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2726715/forms/201817172954056660/subscribe" method="post">
+              <div class="ml-form-formContent" id="newsletterContent">
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email">
+                    <input aria-label="email" type="email" class="form-control" name="fields[email]" placeholder="Digite seu e-mail..." autocomplete="email" required>
+                  </div>
+                </div>
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Quero receber dicas</button>
+                </div>
+              </div>
+              <div id="newsletterSuccess" class="newsletter-success-msg">
+                🎉 Sucesso! Seu e-mail foi cadastrado com sucesso!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div><div class="footer-brand">⌂ Casa Prática</div><small>Achadinhos para Casa e Cozinha</small></div>
+      <div class="footer-links"><a href="#inicio">Início</a><a href="#cozinha">Cozinha</a><a href="#organizacao">Organização</a><a href="#banheiro">Banheiro</a><a href="#casa">Casa</a><a href="#sobre">Sobre</a></div>
+      <div class="social">Siga-nos nas redes sociais</div>
+    </div>
+    <div class="affiliate-note">
+      <span>Este site contém links de afiliados. Ao comprar através deles, podemos receber uma comissão, sem custo adicional para você.</span>
+      <span>© <span id="year"></span> Casa Prática.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/557798339201?text=Olá!%20Vim%20pelo%20site%20Casa%20Prática%20e%20gostaria%20de%20tirar%20dúvidas." class="whatsapp-float" target="_blank" aria-label="Contato WhatsApp">
+  💬
+</a>
+
+<!-- MODAL DE COMPARAÇÃO DE PREÇOS -->
+<div class="modal-overlay" id="productModal" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 id="modalTitle" class="modal-product-title">Nome do Produto</h3>
+    <p id="modalDesc" class="modal-product-desc">Descrição detalhada...</p>
+    <img id="modalImg" class="modal-product-img" src="" alt="Produto">
+    <div class="stores-comparison-list" id="modalStoresList"></div>
+  </div>
+</div>
+
+<!-- JANELA MODAL DE CATEGORIA -->
+<div class="modal-overlay" id="categoryModal" onclick="closeCategoryModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeCategoryModal()">×</button>
+    <h3 id="modalCategoryTitle" class="modal-category-title">Produtos</h3>
+    <div id="modalProductsList" class="modal-products-list"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// INTERCEPTAR ENVIO DO NEWSLETTER PARA NÃO ABRIR PÁGINA EM BRANCO
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors'
+  }).then(() => {
+    document.getElementById('newsletterContent').style.display = 'none';
+    document.getElementById('newsletterSuccess').style.display = 'block';
+  }).catch(() => {
+    document.getElementById('newsletterContent').style.display = 'none';
+    document.getElementById('newsletterSuccess').style.display = 'block';
+  });
+});
+
+// BANCO DE DADOS DE PRODUTOS
+const dbProducts = [
+  {
+    id: "coz-1",
+    category: "cozinha",
+    title: "Mini Processador de Alimentos Manual",
+    description: "Praticidade para picar alho, cebola e legumes rapidamente sem esforço.",
+    image: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 19,90", badge: "Menor Preço", badgeColor: "#ee4d2d", link: "https://shopee.com.br/product/1404101365/23294633467?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaBRvcqdZwgRklGTWoHoxFGhRfNAexxPkhN1n8rcCO5qFEud_-aY2hsGdfUnqCpX0P0Z7lpJy6IP6_Ew8qmNpcGhlcnRleHTEdAAAAAw3t8mlGrHDubshs9lgm7KyKqIcqWoUaqPBh2FLx_uxBa-8HfpiYTzGeTM2gAA36hW7ysMFe53PGvQJnGdoJdGTDUJ_paMDkRc-5hmgLK-fr04J9y1n9rDfm9uRCKltd0mJS2i1n6aoXVJtMSvecFto&gad_source=1&gad_campaignid=23353217471&gclid=CjwKCAjwotzWBhBFEiwA1JhPoNnFlRO-3nMsNHPxgf9E-17OYZf1Pv7X4fpYSZQIeKqY7eyptmDXgBoCDF0QAvD_BwE" },
+      { name: "Mercado Livre", price: "R$ 24,90", badge: "Full", badgeColor: "#ffe600", link: "#" },
+      { name: "Amazon", price: "R$ 27,90", badge: "Prime", badgeColor: "#ff9900", link: "https://www.amazon.com.br/Processador-Alimentos-Manual-500ml-Lâminas/dp/B0GYB19KM9/ref=asc_df_B0GYB19KM9?mcid=007f48ddfc27335c8208402289cd16e6&tag=googleshopp00-20&linkCode=df0&hvadid=773381654827&hvpos=&hvnetw=g&hvrand=13506456280130902771&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9101328&hvtargid=pla-2480617210723&psc=1&hvocijid=13506456280130902771-B0GYB19KM9-&hvexpln=0&language=pt_BR" }
+    ]
+  },
+  {
+    id: "coz-2",
+    category: "cozinha",
+    title: "Escorredor de Pratos Rolante de Pia",
+    description: "Rolável que economiza espaço na pia e facilita a secagem.",
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 32,50", badge: "Frete Grátis", badgeColor: "#ee4d2d", link: "#" },
+      { name: "Amazon", price: "R$ 39,90", badge: "Prime", badgeColor: "#ff9900", link: "#" }
+    ]
+  },
+  {
+    id: "coz-3",
+    category: "cozinha",
+    title: "Kit Potes Herméticos de Vidro (4 Peças)",
+    description: "Mantém os alimentos frescos por mais tempo com vedação em silicone.",
+    image: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Mercado Livre", price: "R$ 69,90", badge: "Destaque", badgeColor: "#ffe600", link: "#" },
+      { name: "Shopee", price: "R$ 59,90", badge: "Menor Preço", badgeColor: "#ee4d2d", link: "#" }
+    ]
+  },
+  {
+    id: "coz-4",
+    category: "cozinha",
+    title: "Dispenser de Detergente com Esponja",
+    description: "Praticidade na pia da cozinha, economizando sabão e espaço.",
+    image: "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 15,90", badge: "Mais Vendido", badgeColor: "#ee4d2d", link: "#" },
+      { name: "Amazon", price: "R$ 21,90", badge: "Prime", badgeColor: "#ff9900", link: "#" }
+    ]
+  },
+  {
+    id: "coz-5",
+    category: "cozinha",
+    title: "Tapete Absorviente para Pia",
+    description: "Secagem instantânea para louças e copos ao lado da torneira.",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 22,00", badge: "Oferta", badgeColor: "#ee4d2d", link: "#" }
+    ]
+  },
+  {
+    id: "org-1",
+    category: "organizacao",
+    title: "Caixa Organizadora com Tampa",
+    description: "Ideal para armários, closets e organização de documentos ou roupas.",
+    image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 18,90", badge: "Economia", badgeColor: "#ee4d2d", link: "#" },
+      { name: "Mercado Livre", price: "R$ 22,90", badge: "Full", badgeColor: "#ffe600", link: "#" }
+    ]
+  },
+  {
+    id: "org-2",
+    category: "organizacao",
+    title: "Organizador de Gavetas Colméia",
+    description: "Perfeito para organizar roupas íntimas, meias e camisetas.",
+    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 9,90", badge: "Menor Preço", badgeColor: "#ee4d2d", link: "#" },
+      { name: "Amazon", price: "R$ 14,90", badge: "Prime", badgeColor: "#ff9900", link: "#" }
+    ]
+  },
+  {
+    id: "org-3",
+    category: "organizacao",
+    title: "Cabides Slim Aveludados (Kit 10un)",
+    description: "Otimize espaço no guarda-roupa com cabides antiderrapantes.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Mercado Livre", price: "R$ 35,90", badge: "Frete Grátis", badgeColor: "#ffe600", link: "#" }
+    ]
+  },
+  {
+    id: "org-4",
+    category: "organizacao",
+    title: "Suporte Organizador de Panelas",
+    description: "Guarde panelas e tampas de forma vertical economizando espaço.",
+    image: "https://images.unsplash.com/photo-1616486029423-aaa4789e5c9a?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 25,00", badge: "Destaque", badgeColor: "#ee4d2d", link: "#" }
+    ]
+  },
+  {
+    id: "ban-1",
+    category: "banheiro",
+    title: "Porta Shampoo Adesivo para Box",
+    description: "Sem furos na parede, instalação super prática com adesivo forte.",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 16,90", badge: "Mais Vendido", badgeColor: "#ee4d2d", link: "#" },
+      { name: "Amazon", price: "R$ 24,90", badge: "Prime", badgeColor: "#ff9900", link: "#" }
+    ]
+  },
+  {
+    id: "ban-2",
+    category: "banheiro",
+    title: "Tapete Antiderrapante para Banheiro",
+    description: "Toque macio, ultra absorvente e seguro contra escorregões.",
+    image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Mercado Livre", price: "R$ 29,90", badge: "Full", badgeColor: "#ffe600", link: "#" }
+    ]
+  },
+  {
+    id: "ban-3",
+    category: "banheiro",
+    title: "Porta Escovas de Dente com Dispenser de Pasta",
+    description: "Higiênico e prático, aciona a pasta de dente automaticamente.",
+    image: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 28,50", badge: "Oferta", badgeColor: "#ee4d2d", link: "#" }
+    ]
+  },
+  {
+    id: "ban-4",
+    category: "banheiro",
+    title: "Lixeira Inox com Pedal 5L",
+    description: "Design elegante e discreto para banheiros e lavabos.",
+    image: "https://images.unsplash.com/photo-1615873968403-89e067629765?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Amazon", price: "R$ 49,90", badge: "Prime", badgeColor: "#ff9900", link: "#" }
+    ]
+  },
+  {
+    id: "cas-1",
+    category: "casa",
+    title: "Luminária de LED com Sensor de Movimento",
+    description: "Ideal para corredores, escadas e guarda-roupas, acende sozinha.",
+    image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 14,90", badge: "Menor Preço", badgeColor: "#ee4d2d", link: "#" },
+      { name: "Mercado Livre", price: "R$ 19,90", badge: "Full", badgeColor: "#ffe600", link: "#" }
+    ]
+  },
+  {
+    id: "cas-2",
+    category: "casa",
+    title: "Extensão Elétrica Retrátil Organizer",
+    description: "Mantenha fios organizados sem embolar atrás da estante ou mesa.",
+    image: "https://images.unsplash.com/photo-1558089687-f282ffcbc126?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Amazon", price: "R$ 39,90", badge: "Prime", badgeColor: "#ff9900", link: "#" }
+    ]
+  },
+  {
+    id: "cas-3",
+    category: "casa",
+    title: "Vassoura Mop Spray com Reservatório",
+    description: "Limpeza rápida de pisos sem precisar de balde.",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 38,90", badge: "Frete Grátis", badgeColor: "#ee4d2d", link: "#" },
+      { name: "Mercado Livre", price: "R$ 44,90", badge: "Destaque", badgeColor: "#ffe600", link: "#" }
+    ]
+  },
+  {
+    id: "cas-4",
+    category: "casa",
+    title: "Protetor de Porta Vedador Duplo",
+    description: "Bloqueia entrada de poeira, insetos e vento por baixo da porta.",
+    image: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=600&q=80",
+    stores: [
+      { name: "Shopee", price: "R$ 12,90", badge: "Economia", badgeColor: "#ee4d2d", link: "#" }
+    ]
+  }
+];
+
+// ESTADOS DE EXIBIÇÃO POR SEÇÃO
+const sectionState = {
+  cozinha: false,
+  organizacao: false,
+  banheiro: false,
+  casa: false
+};
+
+function renderSections() {
+  const categories = ['cozinha', 'organizacao', 'banheiro', 'casa'];
+  
+  categories.forEach(cat => {
+    const container = document.getElementById(`products-${cat}`);
+    const actionsContainer = document.getElementById(`actions-${cat}`);
+    if (!container) return;
+
+    const items = dbProducts.filter(p => p.category === cat);
+    const isExpanded = sectionState[cat];
+    const visibleItems = isExpanded ? items : items.slice(0, 4);
+
+    container.innerHTML = visibleItems.map(p => `
+      <div class="card">
+        <img src="${p.image}" alt="${p.title}" loading="lazy">
+        <div class="card-content">
+          <h3>${p.title}</h3>
+          <p>${p.description}</p>
+          <button class="btn" onclick="openProductModal('${p.id}')">Ver & Comparar Preços</button>
+        </div>
+      </div>
+    `).join('');
+
+    if (items.length > 4) {
+      actionsContainer.innerHTML = `
+        <button class="btn-toggle-section" onclick="toggleSection('${cat}')">
+          ${isExpanded ? 'Ver Menos ↑' : `Ver Todos (${items.length}) ↓`}
+        </button>
+      `;
+    } else {
+      actionsContainer.innerHTML = '';
+    }
+  });
+}
+
+function toggleSection(cat) {
+  sectionState[cat] = !sectionState[cat];
+  renderSections();
+}
+
+function openProductModal(id) {
+  const product = dbProducts.find(p => p.id === id);
+  if (!product) return;
+
+  document.getElementById('modalTitle').textContent = product.title;
+  document.getElementById('modalDesc').textContent = product.description;
+  document.getElementById('modalImg').src = product.image;
+
+  const storesList = document.getElementById('modalStoresList');
+  storesList.innerHTML = product.stores.map(s => `
+    <div class="store-row">
+      <div class="store-info">
+        <span class="store-name">${s.name}</span>
+        ${s.badge ? `<span class="store-badge" style="background:${s.badgeColor}">${s.badge}</span>` : ''}
+      </div>
+      <div class="store-right">
+        <span class="store-price">${s.price}</span>
+        <a href="${s.link}" target="_blank" class="store-btn">Ir para a Loja ↗</a>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('productModal').style.display = 'flex';
+}
+
+function closeModal(event) {
+  if (!event || event.target.id === 'productModal') {
+    document.getElementById('productModal').style.display = 'none';
+  }
+}
+
+function openCategoryModal(cat) {
+  const titles = {
+    cozinha: "Destaques da Cozinha",
+    organizacao: "Organização da Casa",
+    banheiro: "Banheiro e Lavanderia",
+    casa: "Ideias para a Casa"
+  };
+
+  document.getElementById('modalCategoryTitle').textContent = titles[cat] || "Produtos";
+  const items = dbProducts.filter(p => p.category === cat);
+
+  const listContainer = document.getElementById('modalProductsList');
+  listContainer.innerHTML = items.map(p => `
+    <div class="modal-item-card">
+      <img src="${p.image}" alt="${p.title}" loading="lazy">
+      <div class="modal-item-info">
+        <h4>${p.title}</h4>
+        <p>${p.description}</p>
+        <button class="store-btn" onclick="closeCategoryModal(); openProductModal('${p.id}');">Comparar Preços</button>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('categoryModal').style.display = 'flex';
+}
+
+function closeCategoryModal(event) {
+  if (!event || event.target.id === 'categoryModal') {
+    document.getElementById('categoryModal').style.display = 'none';
+  }
+}
+
+renderSections();
+</script>
+</body>
+</html>
